@@ -1,0 +1,355 @@
+#home {
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.character {
+  display: inline-block;
+  font-weight: 900;
+  opacity: 0;
+}
+
+#welcomeNote {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 3rem;
+  padding-top: 10rem;
+}
+
+#welcomeNote #brand .jioSVGCont .jioSVG {
+  width: 11rem;
+  margin: -1.5rem;
+  margin-bottom: -2rem;
+}
+
+#welcomeNote #brand .jioSVGCont .jioSVG .jioLogoCircle {
+  stroke: var(--logo-col-jio);
+  stroke-width: 1px;
+  stroke-dasharray: 1210;
+  stroke-dashoffset: 1210;
+  fill: var(--logo-col-jio);
+  fill-opacity: 0;
+}
+
+#welcomeNote #brand .jioSVGCont .jioSVG .jioLogoText {
+  stroke: var(--logo-col-jio);
+  fill: white;
+  fill-opacity: 0;
+  stroke-width: 2px;
+  stroke-dasharray: 470;
+  stroke-dashoffset: 470;
+}
+
+#welcomeNote #brand #jio {
+  width: 10rem;
+  background: white;
+  border-radius: 50%;
+  opacity: 0;
+  display: none;
+}
+
+#welcomeNote #brand #creative, #welcomeNote #brand #labs {
+  line-height: 6.5rem;
+  font-size: 5.5rem;
+  padding: 0 1rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-family: var(--logo-font);
+}
+
+#welcomeNote #brand #creative {
+  color: var(--logo-col-pink);
+  background: none;
+}
+
+#welcomeNote #brand #creative .character:hover {
+  color: var(--logo-col-blue);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#welcomeNote #brand #labs {
+  color: var(--logo-col-blue);
+  background: none;
+}
+
+#welcomeNote #brand #labs .character:hover {
+  color: var(--logo-col-pink);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#welcomeNote #brand:hover {
+  cursor: default;
+}
+
+.animateSVG {
+  -webkit-animation: lineLogo 1.5s forwards, fillLogo 1s forwards 1.25s;
+          animation: lineLogo 1.5s forwards, fillLogo 1s forwards 1.25s;
+}
+
+.slideFromRight {
+  -webkit-animation: slideFromRight 1.5s forwards !important;
+          animation: slideFromRight 1.5s forwards !important;
+}
+
+.homeVideoAnimate {
+  -webkit-animation: homeVideoAnimate 0.7s 2s forwards !important;
+          animation: homeVideoAnimate 0.7s 2s forwards !important;
+}
+
+.fixCreative {
+  -webkit-animation: fixCreative 2.5s 1s forwards;
+          animation: fixCreative 2.5s 1s forwards;
+}
+
+.fixLabs {
+  -webkit-animation: fixLabs 2.5s 1s forwards;
+          animation: fixLabs 2.5s 1s forwards;
+}
+
+@-webkit-keyframes homeVideoAnimate {
+  from {
+    -webkit-transform: scale(0.975);
+            transform: scale(0.975);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes homeVideoAnimate {
+  from {
+    -webkit-transform: scale(0.975);
+            transform: scale(0.975);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fixCreative {
+  to {
+    color: white;
+    background: var(--logo-col-pink);
+  }
+}
+
+@keyframes fixCreative {
+  to {
+    color: white;
+    background: var(--logo-col-pink);
+  }
+}
+
+@-webkit-keyframes fixLabs {
+  to {
+    color: white;
+    background: var(--logo-col-blue);
+  }
+}
+
+@keyframes fixLabs {
+  to {
+    color: white;
+    background: var(--logo-col-blue);
+  }
+}
+
+@-webkit-keyframes slideFromRight {
+  from {
+    -webkit-transform: translateX(5rem);
+            transform: translateX(5rem);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translate(0rem);
+            transform: translate(0rem);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromRight {
+  from {
+    -webkit-transform: translateX(5rem);
+            transform: translateX(5rem);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translate(0rem);
+            transform: translate(0rem);
+    opacity: 1;
+  }
+}
+
+#background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  opacity: 0;
+  z-index: -2;
+}
+
+#background #homeVideo {
+  min-height: 100%;
+  max-width: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+  opacity: 0;
+}
+
+#background #backImgCont {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#background #backImgCont #backImg {
+  min-width: 100%;
+  max-height: 100%;
+}
+
+.fadeIn {
+  -webkit-animation: fadeIn 0.75s forwards;
+          animation: fadeIn 0.75s forwards;
+}
+
+@-webkit-keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes lineLogo {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes lineLogo {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes fillLogo {
+  to {
+    fill-opacity: 1;
+  }
+}
+
+@keyframes fillLogo {
+  to {
+    fill-opacity: 1;
+  }
+}
+
+.slideBottom {
+  -webkit-animation: slideBottom 1.5s forwards;
+          animation: slideBottom 1.5s forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+@-webkit-keyframes slideBottom {
+  0% {
+    -webkit-transform: translateY(5rem);
+            transform: translateY(5rem);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0rem);
+            transform: translateY(0rem);
+    opacity: 1;
+  }
+}
+
+@keyframes slideBottom {
+  0% {
+    -webkit-transform: translateY(5rem);
+            transform: translateY(5rem);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0rem);
+            transform: translateY(0rem);
+    opacity: 1;
+  }
+}
+
+.slideTop {
+  -webkit-animation: slideTop 1.5s forwards;
+          animation: slideTop 1.5s forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+@-webkit-keyframes slideTop {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-5rem);
+            transform: translateY(-5rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0rem);
+            transform: translateY(0rem);
+  }
+}
+
+@keyframes slideTop {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-5rem);
+            transform: translateY(-5rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0rem);
+            transform: translateY(0rem);
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  #navLogoTextCont {
+    text-align: left;
+  }
+}
+
+@media only screen and (max-width: 690px) {
+  #reels {
+    -webkit-box-flex: 0;
+        -ms-flex: 0;
+            flex: 0;
+  }
+}
+/*# sourceMappingURL=Home.css.map */

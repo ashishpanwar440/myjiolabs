@@ -1,0 +1,349 @@
+@import '../Root/Variables.scss';
+
+#buzz {
+    padding: 0;
+}
+
+#newsPageCont {
+    position: relative;
+    overflow: scroll;
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    width: 100%;
+    height: 100%;
+
+    #legacyCont {
+        height: 100vh;
+        width: 100%;
+        padding-right: 15vw;
+        box-sizing: border-box;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        background: var(--logo-col-blue);
+
+        #legacyHead {
+            position: absolute;
+            right: 0vw;
+            z-index: 1;
+            height: 100%;
+            width: 15vw;
+            padding: 0 2rem;
+            box-sizing: border-box;
+            text-transform: uppercase;
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+            font-family: var(--logo-font);
+            font-size: 3.5rem;
+            letter-spacing: -1.5rem;
+            display: flex;
+            color: white;
+            align-items: flex-start;
+            justify-content: center;
+            background: var(--logo-col-pink);
+            clip-path: ellipse(73% 63% at 90% 59%);
+            font-weight: 900;
+            transform: scaleX(1.3); 
+        }  
+
+        #legacyGrid {
+            display: grid;
+            box-sizing: border-box;
+            grid-gap: 2.5rem;
+            margin: 2.5rem;
+            position: relative;
+            width: 100%;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
+            
+            .legacyItem {
+                position: relative;
+                overflow: hidden;     
+                z-index: 2;
+                border-radius: 20px;
+                background: var(--logo-col-blue);
+
+                .legacyImgCont {
+                    height: 100%;
+                    width: 100%;
+                    box-sizing: border-box;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    overflow: hidden;
+                    background: white;
+                    border-radius: 20px;
+                    position: absolute;
+                    top: 0;
+                    transition: 0.4s;
+
+                    img {
+                        height: 100%;
+                    }
+                }
+
+                .legacyDetCont {
+                    position: absolute;
+                    clip-path: circle(0rem at calc(100% - 4rem) 4rem);
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 0.5rem;
+                    z-index: 10;
+                    background: var(--logo-col-pink);
+                    border-radius: 10px;
+                    color: white;
+                    text-align: center;
+                    transition: 0.4s;
+
+                    .legacyTitle {
+                        font-size: 1.7rem;
+                        font-weight: 600;
+                        margin: 1rem 0;
+                    }
+                    .legacyText {
+                        text-align: center;
+                        font-size: 1.05rem;
+                        line-height: 1.75rem;
+                        
+                        .legacyLink {
+                            margin-left: 1rem;
+                            font-size: 1.2rem;
+                            text-decoration: none;
+                            color: white;
+                            font-weight: bold;
+                            text-transform: uppercase;
+                            font-family: monospace;
+                            letter-spacing: 1px;
+                        }
+                    }
+                }
+                
+                .onHoverLeg {
+                    position: absolute;
+                    z-index: 15;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    top: 1rem;
+                    right: 1rem;
+                    transition: 0.4s;
+                    color:white;
+                    background: rgb(1, 18, 175);
+                    width: 6rem;
+                    height: 6rem;
+                    border-radius: 50%;
+                }
+
+                .onHoverLeg:hover {
+                    opacity: 0;
+                    background: var(--logo-col-pink);
+                }
+
+                .onHoverLeg:hover + .legacyDetCont{
+                    clip-path: circle(140% at calc(100% - 4rem) 4rem);
+                }
+
+            }
+        }
+
+        #inTheNewsLink {
+            position: absolute;
+            bottom: 0.5rem;
+            font-size: 1.5rem;
+            color: white;
+        }
+    }
+
+    #newsCont {
+        height: 100vh;
+        width: 100%;
+        padding-right: 15vw;
+        box-sizing: border-box;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        background: var(--logo-col-pink);
+
+        #newsHead {
+            position: absolute;
+            right: 0vw;
+            z-index: 1;
+            height: 100%;
+            width: 15vw;
+            padding: 0 2rem;
+            box-sizing: border-box;
+            text-transform: uppercase;
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+            font-family: var(--logo-font);
+            font-size: 3rem;
+            letter-spacing: -1.2rem;
+            display: flex;
+            color: white;
+            align-items: flex-start;
+            justify-content: center;
+            background: var(--logo-col-blue);
+            clip-path: ellipse(73% 63% at 90% 59%);
+            font-weight: 900;
+            transform: scaleX(1.3); 
+        }
+
+        #newsGrid {
+            display: grid;
+            box-sizing: border-box;
+            grid-gap: 2.5rem;
+            margin: 2.5rem;
+            position: relative;
+            width: 100%;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
+            
+            .newsItem {
+                position: relative;
+                overflow: hidden;     
+                z-index: 2;
+                border-radius: 20px;
+                background: var(--logo-col-blue);
+
+                .newsImgCont {
+                    height: 100%;
+                    width: 100%;
+                    box-sizing: border-box;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    overflow: hidden;
+                    background: white;
+                    border-radius: 20px;
+                    position: absolute;
+                    top: 0;
+                    transition: 0.4s;
+
+                    img {
+                        height: 100%;
+                    }
+                }
+
+                .newsDetCont {
+                    position: absolute;
+                    clip-path: circle(0rem at calc(100% - 4rem) 4rem);
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 0.5rem;
+                    z-index: 10;
+                    background: var(--logo-col-blue);
+                    border-radius: 10px;
+                    color: white;
+                    text-align: center;
+                    transition: 0.4s;
+
+                    .newsTitle {
+                        font-size: 1.7rem;
+                        font-weight: 600;
+                        margin: 1rem 0;
+                    }
+                    .newsText {
+                        text-align: center;
+                        font-size: 1.05rem;
+                        line-height: 1.75rem;
+                        
+                        .newsLink {
+                            margin-left: 1rem;
+                            font-size: 1.2rem;
+                            text-decoration: none;
+                            color: white;
+                            font-weight: bold;
+                            text-transform: uppercase;
+                            font-family: monospace;
+                            letter-spacing: 1px;
+                        }
+                    }
+                }
+                
+                .onHoverNews {
+                    position: absolute;
+                    z-index: 15;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    top: 1rem;
+                    right: 1rem;
+                    transition: 0.4s;
+                    color:white;
+                    background: rgb(1, 18, 175);
+                    width: 6rem;
+                    height: 6rem;
+                    border-radius: 50%;
+                }
+
+                .onHoverNews:hover {
+                    opacity: 0;
+                    background: var(--logo-col-pink);
+                }
+
+                .onHoverNews:hover + .newsDetCont{
+                    clip-path: circle(140% at calc(100% - 4rem) 4rem);
+                }
+
+            }
+        }
+
+    }
+}
+
+@keyframes scrollDown {
+    0% {
+        transform: translateY(-3rem);
+        opacity: 1;
+    } 50% {
+        opacity: 1;
+    } 100% {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+}
+
+.leftIn {
+    animation: leftIn 0.75s cubic-bezier(.82,.47,0,.99) forwards;
+}
+
+.rightIn {
+    animation: rightIn 0.75s cubic-bezier(.82,.47,0,.99) forwards;
+}
+
+@keyframes leftIn {
+    from {
+        transform: translateX(-100vw);
+        opacity: 0;
+    } to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes rightIn {
+    from {
+        transform: translateX(100vw);
+        opacity: 0;
+    } to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.inTheNewsClip {
+    animation: inTheNewsClip 0.75s cubic-bezier(.32,.53,.21,.99) forwards;
+}
+
+@keyframes inTheNewsClip {
+    to {
+        clip-path: ellipse(73% 63% at 90% 59%); 
+    }
+}
+

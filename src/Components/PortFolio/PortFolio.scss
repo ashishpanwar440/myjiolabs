@@ -1,0 +1,349 @@
+@import '../Root/Variables.scss';
+
+#work {
+    align-items: center;
+    padding: 0;
+}
+
+#worksPageCont {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    // background: var(--logo-col-blue);
+}
+
+#workLayout {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 1rem;          
+    
+    #workTop {
+        flex: 2.5;
+        display: flex;
+        padding-bottom: 1rem;
+
+        #videoArea {
+                flex: 2;
+                overflow: hidden;
+                position: relative;
+                perspective: 1000px;
+                // background: black;
+                border-radius: 15px;
+                margin-right: 0.5rem;
+                
+                .videoCont {
+                    overflow: hidden;
+                    transform-origin: center center -450px;
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    background: black;
+                    border-radius: 15px;
+                    justify-content: center;
+                    position: absolute;
+                    transform: rotateY(71deg);
+                    opacity: 0;
+                    
+                    video {
+                        object-fit: fill;
+                        height: 100%;
+            
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                }
+            }
+
+        #workDetGrid {
+            flex: 1;
+            position: relative;
+            perspective: 1000px;
+            margin-left: 0.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            justify-content: stretch;
+            height: 100%;
+            // box-sizing: border-box;
+            
+            .workDetItem {
+                box-sizing: border-box;
+                transform-origin: center center -450px;
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                border-radius: 10px;
+                height: 100%;
+                flex: 1;
+                transform: rotateY(71deg);
+                opacity: 0;
+
+                .workHead {
+                    padding: 1rem;
+                    font-size: 2rem;
+                    border-radius: 10px;
+                    background: var(--logo-col-jio);
+                    font-weight: 700;
+                    color: var(--text-col-2);
+                    color: white;
+                    margin-bottom: 1rem;
+                }
+                
+                .workDesc {
+                    padding: 1rem;
+                    color: white;
+                    border-radius: 10px;
+                    background: var(--logo-col-pink);
+                    flex: 1;
+                }
+        
+                .workLinkCont {
+                    margin-top: 1rem;
+        
+                    .workLink {
+                        display: block;
+                        border-radius: 10px;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                        color: white;
+                        text-decoration: none;
+                        padding: 1rem 2rem;
+                        font-size: 1rem;
+                        background: var(--logo-col-jio) !important; 
+                        transition: 0.2s;
+        
+                        &:hover {
+                            transform: scale(1.05);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #workGrid {
+        overflow: hidden;
+        position: relative;
+        height: 100%;
+        z-index: 2;
+        display: flex;
+        flex-direction: row;
+        background: var(--logo-col-jio);
+        border-radius: 15px;
+        flex: 1;
+        box-sizing: border-box;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        .workItem {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            box-sizing: border-box;
+            transition: 0.3s;
+            transform: scale(1);
+            padding: 1rem;
+            width: 0;
+            
+            &:hover {
+                transition: 0.3s;
+                background:#386dff;
+                transform: scale(1.025);
+                cursor: pointer;
+
+                .workHead {
+                    color: white;
+                }
+            }
+
+            .workImgCont {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+                border-radius: 10px;
+                flex: 10;
+                margin-top: 1rem;
+
+                .workListImg {
+                    height: 100%;
+                    border-radius: 10px;
+                    align-self: center;
+                }
+            }
+
+            .workHead {
+                font-size: 1rem;
+                flex: 1;
+                color: var(--text-col-2);
+                color: white;
+                font-weight: 700;
+                margin-top: 0.5rem;
+                text-align: center;
+                transition: 0.2s;
+            }
+        }
+    }
+}
+
+.showVideoLeft {
+    animation: showVideoLeft 1s forwards cubic-bezier(.5,.22,.1,.98) !important;
+}
+
+.hideVideoLeft {
+    animation: hideVideoLeft 1s forwards cubic-bezier(.5,.22,.1,.98) !important;
+}
+
+.showVideoRight {
+    animation: showVideoRight 1s forwards cubic-bezier(.5,.22,.1,.98) !important;
+}
+
+.hideVideoRight {
+    animation: hideVideoRight 1s forwards cubic-bezier(.5,.22,.1,.98) !important;
+}
+
+.selectedWorkItem {
+    // background: rgb(14, 126, 255) !important;
+    background: var(--logo-col-pink) !important;
+    transform: none !important;
+
+    .workHead {
+        color: var(--text-col-1) !important;
+        color: white !important;
+        font-size: 1.05rem !important;
+    }
+}
+
+.showWorkDetLeft {
+    animation: showWorkDetLeft 1s cubic-bezier(.5,.22,.1,.98) forwards !important;
+}
+
+.showWorkDetRight {
+    animation: showWorkDetRight 1s cubic-bezier(.5,.22,.1,.98) forwards !important;
+}
+
+.hideWorkDetLeft {
+    animation: hideWorkDetLeft 1s cubic-bezier(.5,.22,.1,.98) forwards !important;
+}
+
+.hideWorkDetRight {
+    animation: hideWorkDetRight 1s cubic-bezier(.5,.22,.1,.98) forwards !important;
+}
+
+@keyframes hideWorkDetLeft {
+    0% {
+        transform: scale(1) rotateY(0);
+        opacity: 1;
+    } 40% {
+        transform: scale(0.8) rotateY(0);
+    } 100% {
+        transform: rotateY(71deg);
+        opacity: 0;
+    }
+}
+
+@keyframes showWorkDetLeft {
+    0% {
+        transform: scale(0.8) rotateY(71deg);
+        opacity: 0;
+    } 40% {
+        transform: scale(0.8) rotateY(71deg);
+        opacity: 0;
+    } 100% {
+        transform: scale(1) rotateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes hideWorkDetRight {
+    0% {
+        transform: scale(1) rotateY(0);
+        opacity: 1;
+    } 40% {
+        transform: scale(0.8) rotateY(0);
+    } 100% {
+        transform: rotateY(-71deg);
+        opacity: 0;
+    }
+}
+
+@keyframes showWorkDetRight {
+    0% {
+        transform: scale(0.8) rotateY(-71deg);
+        opacity: 0;
+    } 40% {
+        transform: scale(0.8) rotateY(-71deg);
+        opacity: 0;
+    } 100% {
+        transform: scale(1) rotateY(0);
+        opacity: 1;
+    }
+}
+
+
+@keyframes showVideoLeft {
+    0% {
+        transform: scale(0.8) rotateY(-71deg);
+        opacity: 0;
+    } 40% {
+        transform: scale(0.8) rotateY(-71deg);
+        opacity: 0;
+    } 100% {
+        transform: scale(1) rotateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes hideVideoLeft {
+    0% {
+        transform: scale(1) rotateY(0);
+        opacity: 1;
+    } 40% {
+        transform: scale(0.8) rotateY(0);
+    } 100% {
+        transform: rotateY(-71deg);
+        opacity: 0;
+    }
+}
+
+@keyframes showVideoRight {
+    0% {
+        transform: scale(0.8) rotateY(71deg);
+        opacity: 0;
+    } 40% {
+        transform: scale(0.8) rotateY(71deg);
+        opacity: 0;
+    } 100% {
+        transform: scale(1) rotateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes hideVideoRight {
+    0% {
+        transform: scale(1) rotateY(0);
+        opacity: 1;
+    } 40% {
+        transform: scale(0.8) rotateY(0);
+    } 100% {
+        transform: rotateY(71deg);
+        opacity: 0;
+    }
+}
+
+@media only screen and (max-width: $fst-brk-pt) {
+    
+}
+
+@media only screen and (max-width: $scnd-brk-pt) {
+
+}

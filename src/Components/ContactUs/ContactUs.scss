@@ -1,0 +1,294 @@
+@import '../Root/Variables.scss';
+
+#contact {
+    overflow: scroll;
+    padding: 0;
+    color: var(--logo-col-jio);
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+#contactCont {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+
+    .leftDotsCont {
+        left: 2.5rem;
+    }
+}
+
+#contactHead {
+    font-size: 3rem;
+    color: white;
+    font-family: var(--head-font);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 3.5rem;
+    padding-left: 2rem;
+    width: 100%;
+
+    .contactHeadWord {
+        margin: 0 0.5rem;
+    }
+    
+    .contactHeadChar {
+        opacity: 0;
+        display: inline-block;
+    }
+
+    svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        path {
+            fill: var(--logo-col-pink);
+        }
+    }
+}
+
+#partnerShipCont {
+    flex: 2;
+    padding: 1rem;
+    padding-top: 15rem;
+    padding-left: 3rem;
+
+    #partnerShipHead {
+        font-size: 1.6rem;
+        margin: 0 5px 1rem 5px;
+        font-weight: 600;
+        color: var(--text-col-3);
+        text-transform: uppercase;
+        opacity: 0;
+    }
+}
+
+#otherContactCont {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    padding-top: 12rem;
+    padding-right: 5rem;
+
+    .otherContItem {
+        margin-bottom: 2rem;
+        opacity: 0;
+        background: var(--logo-col-blue);
+        padding: 1rem;
+        box-sizing: border-box;
+        border-radius: 5px;
+
+        .otherContHead {
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--text-col-3);
+            // color: white;
+        }
+        
+        .otherContText {
+            font-size: 1rem;
+            margin: 10px 0;
+            font-weight: 800;
+            font-family: var(--nav-font);
+            color: white;
+
+            .contName, .contPhone, .contEmail {
+                font-weight: 600;
+                font-size: 1.1rem;
+                color: var(--logo-col-jio);
+                color: var(--text-col-3);
+            }
+        }
+
+    }
+    
+    #mapCont {
+        
+        background: var(--logo-col-pink);
+        min-height: calc(100px + 2rem);
+        display: flex;
+        align-items: center;
+        
+        a {
+            color: white;
+            padding-right: 100px;
+            text-decoration: none;
+        }
+
+        #mapHovCont {
+            clip-path: circle(50px at calc(100% - 3.4rem) calc(100% - 3.4rem));
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50vw;
+            height: 80vh;
+            transition: 0.4s;
+            background: var(--logo-col-blue);
+            border-radius: 10px;
+            
+            div {
+                color: white;
+                position: absolute;
+                bottom: 2.6rem;
+                transition: 0.4s;
+                right: 1rem;
+            }
+            
+            #map {
+                opacity: 0;
+                width: 50vw;
+                height: 80vh;
+                transition: 0.4s;
+                position: absolute;
+                border-radius: 10px;
+            }
+            
+            &:hover {
+                background: var(--logo-col-pink);
+                clip-path: circle(150% at 100% 100%);
+                transition: 0.4s;
+                
+                #map {
+                    transition: 0.4s;
+                    transform: scale(1.1);
+                    opacity: 1;
+                }
+                
+                div {
+                    transition: 0.4s;
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}
+
+#contactFormCont {
+    .formDiv {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 10px;
+        margin-left: 0;
+        opacity: 0;
+    }
+
+    .contactInput, textarea {
+        flex: 1;
+        // background: #f9f9f9;
+        border: none;
+        border-bottom: 2px solid var(--logo-col-blue);
+        padding: 1.5rem;
+        font-size: 1rem;
+        font-family: var(--head-font);
+        font-weight: 900;
+        box-sizing: border-box;
+        // border-bottom: 2px solid var(--back-col-2);
+        margin: 0 5px;
+
+        &:focus {
+            outline: none;
+            border-bottom: 2px solid var(--primary-col);
+        }
+
+        &::placeholder {
+            color: rgb(160, 160, 160);
+        }
+    }
+
+    // textarea {
+    //     border-bottom: 2px solid var(--primary-col) !important;
+
+    //     &::placeholder {
+    //         color: var(--logo-col-blue);
+    //     }
+    // }
+
+    #formSubmitCont {
+        display: flex;
+        justify-content: flex-end;
+        margin: 10px;
+        opacity: 0;
+
+        button {
+            margin: 10px 5px;
+            background: var(--logo-col-pink);
+            border: 2px solid var(--logo-col-pink);
+            padding: 10px 30px;
+            font-size: 1rem;
+            font-weight: 400;
+            color: white;
+            transition: 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            border-radius: 5px;
+            opacity: 1;
+
+            &:hover {
+                transition: 0.2s;
+                opacity: 0.8;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.slideFromBottom {
+    animation: slideFromBottom 0.5s forwards cubic-bezier(0,1.25,1,1);
+}
+
+@keyframes slideFromBottom {
+    0% {
+        transform: translateY(50vh);
+        opacity: 0;
+    } 100% {
+        transform: translateY(0vh);
+        opacity: 1;
+    }
+}
+
+
+@media only screen and (max-width: $scnd-brk-pt) {
+    #contactCont {
+        flex-direction: column;
+        padding-top: 1rem;
+
+        #partnerShipCont {
+            flex: auto;
+
+            #partnerShipHead {
+                margin-top: 0.75rem;
+                font-size: 1.75rem;
+            }
+
+            #contactFormCont {
+                .formDiv {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    margin: 0px 10px;
+
+                    .contactInput, textarea { 
+                        margin: 5px 0;
+                        padding: 1rem;
+                    }
+                }
+            }
+        }
+        
+        #otherContactCont {
+            flex: auto;
+        }
+    }  
+}

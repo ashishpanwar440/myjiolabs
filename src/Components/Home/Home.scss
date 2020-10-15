@@ -1,0 +1,239 @@
+@import '../Root/Variables.scss';
+
+#home {
+    justify-items: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.character {
+    display: inline-block;
+    font-weight: 900;
+    opacity: 0; 
+}
+
+#welcomeNote {
+    flex: 1;
+    box-sizing: border-box;
+    padding-left: 3rem;
+    padding-top: 10rem;
+
+    #brand {
+
+        .jioSVGCont {
+
+            .jioSVG {
+                width: 11rem;
+                margin: -1.5rem;
+                margin-bottom: -2rem;
+
+                .jioLogoCircle {
+                    stroke: var(--logo-col-jio);
+                    stroke-width: 1px;
+                    stroke-dasharray: 1210;
+                    stroke-dashoffset: 1210;
+                    fill: var(--logo-col-jio);
+                    fill-opacity: 0;
+                }
+                
+                .jioLogoText {
+                    stroke: var(--logo-col-jio);
+                    fill: white;
+                    fill-opacity: 0;
+                    stroke-width: 2px;
+                    stroke-dasharray: 470;
+                    stroke-dashoffset: 470;
+                }
+            }
+        }
+
+        #jio {
+            width: 10rem;
+            background: white;
+            border-radius: 50%;
+            opacity: 0;
+            display: none;
+        }
+    
+        #creative, #labs {
+            line-height: 6.5rem;
+            font-size: 5.5rem;
+            padding: 0 1rem;
+            width: fit-content;
+            font-weight: 900;
+            text-transform: uppercase;
+            font-family: var(--logo-font);
+        }
+        
+        #creative {
+            color: var(--logo-col-pink);
+            background: none;
+            .character:hover {
+                color: var(--logo-col-blue);
+                transition: 0.3s;
+            }
+        }
+        
+        #labs {
+            color: var(--logo-col-blue);
+            background: none;
+            .character:hover {
+                color: var(--logo-col-pink);
+                transition: 0.3s;
+            }
+        }
+    
+        &:hover {
+            cursor: default;
+        }
+    }
+}
+
+.animateSVG {
+    animation: lineLogo 1.5s forwards, fillLogo 1s forwards 1.25s;
+}
+
+.slideFromRight {
+    animation: slideFromRight 1.5s forwards !important;
+}
+
+.homeVideoAnimate {
+    animation: homeVideoAnimate 0.7s 2s forwards !important;
+}
+
+.fixCreative {
+    animation: fixCreative 2.5s 1s forwards;
+}
+
+.fixLabs {
+    animation: fixLabs 2.5s 1s forwards;
+}
+
+@keyframes homeVideoAnimate {
+    from {
+        transform: scale(0.975);
+        opacity: 0;
+    } to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fixCreative {
+    to {
+        color: white;
+        background: var(--logo-col-pink);
+    }
+}
+
+@keyframes fixLabs {
+    to {
+        color: white;
+        background: var(--logo-col-blue);
+    }
+}
+
+@keyframes slideFromRight {
+    from {
+        transform: translateX(5rem);
+        opacity: 0;
+    } to {
+        transform: translate(0rem);
+        opacity: 1;
+    }
+}
+
+#background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    opacity: 0;
+    z-index: -2;
+
+    #homeVideo {
+        min-height: 100%;
+        max-width: 100%;
+        object-fit: fill;
+        opacity: 0;
+    }
+
+    #backImgCont {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+
+        #backImg {
+            min-width: 100%;
+            max-height: 100%;
+        }
+    }
+}
+
+.fadeIn {
+    animation: fadeIn 0.75s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes lineLogo {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fillLogo {
+    to {
+        fill-opacity: 1;
+    }
+}
+
+.slideBottom {
+    animation: slideBottom 1.5s forwards;
+    animation-delay: $navigation-time + 1s;
+} 
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(5rem);
+        opacity: 0;
+    } 100% {
+        transform: translateY(0rem);
+        opacity: 1;
+    }
+}
+
+.slideTop {
+    animation: slideTop 1.5s forwards;
+    animation-delay: $navigation-time + 1s;
+} 
+
+@keyframes slideTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-5rem);
+    } 100% {
+        opacity: 1;
+        transform: translateY(0rem);
+    }
+}
+
+@media only screen and (max-width: $fst-brk-pt) {
+    #navLogoTextCont {
+        text-align: left;
+    }
+} 
+
+@media only screen and (max-width: $scnd-brk-pt) {
+    #reels {
+        flex: 0;
+    }
+} 

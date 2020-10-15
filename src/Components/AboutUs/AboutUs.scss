@@ -1,0 +1,315 @@
+@import '../Root/Variables.scss';
+
+#about {
+    padding: 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    .leftDotsCont {
+        left: 3rem;
+    }
+}
+
+#transformingBrands {
+
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: stretch;
+
+    #aboutHead {
+        flex: 2;
+        z-index: 10;
+        padding: 0 2rem;
+        box-sizing: border-box;
+        text-transform: uppercase;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        font-family: var(--logo-font);
+        font-size: 3.5rem;
+        letter-spacing: -1.5rem;
+        display: flex;
+        color: white;
+        align-items: flex-start;
+        justify-content: center;
+        background: var(--logo-col-blue);
+        clip-path: ellipse(73% 63% at 90% 59%);
+        font-weight: 900;
+        transform: scaleX(1.3);
+    }
+
+    #aboutRestCont {
+        flex: 17;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+
+        #aboutGridCont {
+            display: flex;
+            box-sizing: border-box;
+            padding-bottom: 1rem;
+            perspective: 1000px;
+            perspective-origin: center center;
+            position: relative;
+
+            .aboutItem {
+                width: 50%;
+                box-sizing: border-box;
+                height: calc(100% - 1rem);
+                padding: 1rem;
+                background: var(--logo-col-pink);
+                background: rgba(0, 0, 0, 0.575);
+                border-radius: 20px;
+                transition: 0.8s cubic-bezier(0.5, 0.54, 0.02, 1);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                position: absolute;
+                left: 0;
+                top: 0;
+
+                .aboutText {
+                    text-align: center;
+                    color: white;
+                    align-items: center;
+                    line-height: 2rem;
+                    font-size: 1.2rem;
+                    font-weight: 900;
+                }
+            }
+
+            .pseudoAbtItem {
+                position: static !important;
+                opacity: 0 !important;
+            }
+
+            .leftAbout {
+                transform: translate3d(0, 0%, -250px) !important;
+                opacity: 0.4;
+                opacity: 0;
+                z-index: 5;
+            }
+
+            .frontAbout {
+                transform: translate3d(50%, 0, 0) !important;
+                z-index: 10;
+            }
+
+            .rightAbout {
+                transform: translate3d(100%, 0%, -250px) !important;
+                opacity: 0.4;
+                opacity: 0;
+                z-index: 5;
+            }
+        }
+
+        #meetTeamCont {
+            display: none;
+            z-index: 10;
+            width: fit-content;
+            margin-bottom: 0.5rem;
+            border-radius: 10px;
+            background: var(--logo-col-blue);
+            padding: 0.5rem 2rem;
+            
+            a {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                text-decoration: none;
+                color: var(--text-col-2);
+
+                #meetTeamHead {
+                    font-size: 1.25rem;
+                    font-weight: 600;
+                }
+    
+                svg {
+                    font-size: 1.25rem;
+                    margin-left: 1rem;
+                }
+            }
+
+        }
+    }
+
+    .aboutImgCont {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: calc(100vw - 100px);
+        height: 100vh;
+        z-index: -2;
+        transition: 0.5s ease-in;
+
+        .aboutImg {
+            width: 100%;
+            min-height: 100vh;
+        }
+    }
+
+    .showAbtImg {
+        opacity: 1 !important;
+    }
+    .hideAbtImg {
+        opacity: 0 !important;
+    }
+}
+
+#teamCont {
+    display: none;
+    height: 100vh;
+    background: var(--logo-col-pink);
+    position: relative;
+    overflow: hidden;
+
+    #teamsHead {
+        position: absolute;
+        right: 0vw;
+        z-index: 1;
+        height: 100%;
+        width: 15vw;
+        padding: 0 2rem;
+        box-sizing: border-box;
+        text-transform: uppercase;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        font-family: var(--logo-font);
+        font-size: 3.5rem;
+        letter-spacing: -1.5rem;
+        display: flex;
+        color: white;
+        align-items: flex-start;
+        justify-content: center;
+        background: var(--logo-col-blue);
+        clip-path: ellipse(73% 63% at 90% 59%);
+        font-weight: 900;
+        transform: scaleX(1.3);
+    }
+
+    #teamGrid {
+        overflow: scroll;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-right: 15vw;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        .teamItem {
+            display: flex;
+            margin: 1rem;
+
+            &:nth-child(2n) {
+                flex-direction: row-reverse;
+
+                .memDetCont {
+                    align-items: flex-end;
+
+                    .memDesc,
+                    .memName,
+                    .memPos {
+                        text-align: right;
+                    }
+                }
+            }
+
+            .memImgCont {
+                margin: 0 1rem;
+                flex: 2;
+
+                .memImg {
+                    border-radius: 10px;
+                    width: 100%;
+                    transition: transform 0.25s;
+
+                    &:hover {
+                        transform: scale(1.05);
+                    }
+                }
+            }
+
+            .memDetCont {
+                flex: 1;
+                margin: 0 1rem;
+                border-radius: 10px;
+                background: var(--logo-col-blue);
+                padding: 1rem;
+                color: var(--text-col-2);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                transition: transform 0.25s;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+
+                .memName {
+                    font-size: 2rem;
+                    font-weight: 700;
+                }
+
+                .memPos {
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    font-family: monospace;
+                    font-size: 1.5rem;
+                    color: white;
+                    letter-spacing: 4px;
+                }
+
+                .memDesc {
+                    color: var(--text-col-2);
+                    margin: 1rem 0;
+                }
+
+                .memLinks {
+                    color: white;
+                    color: var(--logo-col-pink);
+                    color: var(--text-col-2);
+                    font-size: 1.5rem;
+
+                    svg {
+                        margin: 0.5rem;
+                        cursor: pointer;
+
+                        &:hover {
+                            color: var(--text-col-3);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+
+    #aboutUsBackground {
+        height: 100%;
+        width: auto;
+    }
+}
+
+@media only screen and (max-width: $scnd-brk-pt) {
+
+    #aboutHead {
+        font-size: 2.5rem;
+        margin: 1.25rem 0;
+    }
+
+    #aboutTextCont {
+        width: calc(100% - 0.5rem);
+        margin: 0.5rem;
+    }
+}

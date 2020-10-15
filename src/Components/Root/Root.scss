@@ -1,0 +1,30 @@
+:root {
+
+    --primary-col: #fc2d64;
+    --secondary-col: #04c2cb;
+    --back-primary-col: #ffffff;
+
+    --back-col-1: #ffffff;
+    --back-col-2: #f0f0f0;
+    --back-col-3: #c7c7c7;
+    
+    --text-col-1: #000000;
+    --text-col-2: #1f1f1f;
+    --text-col-3: #484848;
+    --text-col-light: rgb(255, 255, 255);
+
+    --head-font: 'primaryBold';
+    --logo-font: 'Oswald';
+    --nav-font: 'primary';
+    --general-font: 'primary';
+
+    --hover-col: rgb(0, 165, 69);
+    --logo-col-pink: #fc2d3e;
+    // --logo-col-pink: #fc2d64;
+    --logo-col-blue: #04c2cb;
+    --logo-col-jio: #03017f;
+}
+
+body {
+    margin: 0;
+}

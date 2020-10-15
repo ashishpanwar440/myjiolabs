@@ -1,0 +1,412 @@
+#about {
+  padding: 0;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+#about::-webkit-scrollbar {
+  display: none;
+}
+
+#about .leftDotsCont {
+  left: 3rem;
+}
+
+#transformingBrands {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+#transformingBrands #aboutHead {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  z-index: 10;
+  padding: 0 2rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-transform: uppercase;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-family: var(--logo-font);
+  font-size: 3.5rem;
+  letter-spacing: -1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: var(--logo-col-blue);
+  -webkit-clip-path: ellipse(73% 63% at 90% 59%);
+          clip-path: ellipse(73% 63% at 90% 59%);
+  font-weight: 900;
+  -webkit-transform: scaleX(1.3);
+          transform: scaleX(1.3);
+}
+
+#transformingBrands #aboutRestCont {
+  -webkit-box-flex: 17;
+      -ms-flex: 17;
+          flex: 17;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#transformingBrands #aboutRestCont #aboutGridCont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-bottom: 1rem;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  -webkit-perspective-origin: center center;
+          perspective-origin: center center;
+  position: relative;
+}
+
+#transformingBrands #aboutRestCont #aboutGridCont .aboutItem {
+  width: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: calc(100% - 1rem);
+  padding: 1rem;
+  background: var(--logo-col-pink);
+  background: rgba(0, 0, 0, 0.575);
+  border-radius: 20px;
+  -webkit-transition: 0.8s cubic-bezier(0.5, 0.54, 0.02, 1);
+  transition: 0.8s cubic-bezier(0.5, 0.54, 0.02, 1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#transformingBrands #aboutRestCont #aboutGridCont .aboutItem .aboutText {
+  text-align: center;
+  color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 2rem;
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+#transformingBrands #aboutRestCont #aboutGridCont .pseudoAbtItem {
+  position: static !important;
+  opacity: 0 !important;
+}
+
+#transformingBrands #aboutRestCont #aboutGridCont .leftAbout {
+  -webkit-transform: translate3d(0, 0%, -250px) !important;
+          transform: translate3d(0, 0%, -250px) !important;
+  opacity: 0.4;
+  opacity: 0;
+  z-index: 5;
+}
+
+#transformingBrands #aboutRestCont #aboutGridCont .frontAbout {
+  -webkit-transform: translate3d(50%, 0, 0) !important;
+          transform: translate3d(50%, 0, 0) !important;
+  z-index: 10;
+}
+
+#transformingBrands #aboutRestCont #aboutGridCont .rightAbout {
+  -webkit-transform: translate3d(100%, 0%, -250px) !important;
+          transform: translate3d(100%, 0%, -250px) !important;
+  opacity: 0.4;
+  opacity: 0;
+  z-index: 5;
+}
+
+#transformingBrands #aboutRestCont #meetTeamCont {
+  display: none;
+  z-index: 10;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 0.5rem;
+  border-radius: 10px;
+  background: var(--logo-col-blue);
+  padding: 0.5rem 2rem;
+}
+
+#transformingBrands #aboutRestCont #meetTeamCont a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  color: var(--text-col-2);
+}
+
+#transformingBrands #aboutRestCont #meetTeamCont a #meetTeamHead {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+#transformingBrands #aboutRestCont #meetTeamCont a svg {
+  font-size: 1.25rem;
+  margin-left: 1rem;
+}
+
+#transformingBrands .aboutImgCont {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: calc(100vw - 100px);
+  height: 100vh;
+  z-index: -2;
+  -webkit-transition: 0.5s ease-in;
+  transition: 0.5s ease-in;
+}
+
+#transformingBrands .aboutImgCont .aboutImg {
+  width: 100%;
+  min-height: 100vh;
+}
+
+#transformingBrands .showAbtImg {
+  opacity: 1 !important;
+}
+
+#transformingBrands .hideAbtImg {
+  opacity: 0 !important;
+}
+
+#teamCont {
+  display: none;
+  height: 100vh;
+  background: var(--logo-col-pink);
+  position: relative;
+  overflow: hidden;
+}
+
+#teamCont #teamsHead {
+  position: absolute;
+  right: 0vw;
+  z-index: 1;
+  height: 100%;
+  width: 15vw;
+  padding: 0 2rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-transform: uppercase;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-family: var(--logo-font);
+  font-size: 3.5rem;
+  letter-spacing: -1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: var(--logo-col-blue);
+  -webkit-clip-path: ellipse(73% 63% at 90% 59%);
+          clip-path: ellipse(73% 63% at 90% 59%);
+  font-weight: 900;
+  -webkit-transform: scaleX(1.3);
+          transform: scaleX(1.3);
+}
+
+#teamCont #teamGrid {
+  overflow: scroll;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 15vw;
+}
+
+#teamCont #teamGrid::-webkit-scrollbar {
+  display: none;
+}
+
+#teamCont #teamGrid .teamItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1rem;
+}
+
+#teamCont #teamGrid .teamItem:nth-child(2n) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+#teamCont #teamGrid .teamItem:nth-child(2n) .memDetCont {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+#teamCont #teamGrid .teamItem:nth-child(2n) .memDetCont .memDesc,
+#teamCont #teamGrid .teamItem:nth-child(2n) .memDetCont .memName,
+#teamCont #teamGrid .teamItem:nth-child(2n) .memDetCont .memPos {
+  text-align: right;
+}
+
+#teamCont #teamGrid .teamItem .memImgCont {
+  margin: 0 1rem;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+#teamCont #teamGrid .teamItem .memImgCont .memImg {
+  border-radius: 10px;
+  width: 100%;
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: -webkit-transform 0.25s;
+  transition: transform 0.25s;
+  transition: transform 0.25s, -webkit-transform 0.25s;
+}
+
+#teamCont #teamGrid .teamItem .memImgCont .memImg:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+#teamCont #teamGrid .teamItem .memDetCont {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0 1rem;
+  border-radius: 10px;
+  background: var(--logo-col-blue);
+  padding: 1rem;
+  color: var(--text-col-2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: -webkit-transform 0.25s;
+  transition: transform 0.25s;
+  transition: transform 0.25s, -webkit-transform 0.25s;
+}
+
+#teamCont #teamGrid .teamItem .memDetCont:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+#teamCont #teamGrid .teamItem .memDetCont .memName {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+#teamCont #teamGrid .teamItem .memDetCont .memPos {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: monospace;
+  font-size: 1.5rem;
+  color: white;
+  letter-spacing: 4px;
+}
+
+#teamCont #teamGrid .teamItem .memDetCont .memDesc {
+  color: var(--text-col-2);
+  margin: 1rem 0;
+}
+
+#teamCont #teamGrid .teamItem .memDetCont .memLinks {
+  color: white;
+  color: var(--logo-col-pink);
+  color: var(--text-col-2);
+  font-size: 1.5rem;
+}
+
+#teamCont #teamGrid .teamItem .memDetCont .memLinks svg {
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
+#teamCont #teamGrid .teamItem .memDetCont .memLinks svg:hover {
+  color: var(--text-col-3);
+}
+
+@media only screen and (max-width: 1200px) {
+  #aboutUsBackground {
+    height: 100%;
+    width: auto;
+  }
+}
+
+@media only screen and (max-width: 690px) {
+  #aboutHead {
+    font-size: 2.5rem;
+    margin: 1.25rem 0;
+  }
+  #aboutTextCont {
+    width: calc(100% - 0.5rem);
+    margin: 0.5rem;
+  }
+}
+/*# sourceMappingURL=AboutUs.css.map */

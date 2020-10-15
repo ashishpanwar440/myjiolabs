@@ -1,0 +1,277 @@
+@import '../Root/Variables.scss';
+
+#services {
+    padding: 0;
+
+    .leftDotsCont {
+        left: 2.5rem;
+    }
+
+    .rightDotsCont .rightDotsRow .rightDot {
+        background: var(--logo-col-blue);
+        z-index: -3;
+    }
+}
+
+#servicesPageCont {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    overflow: scroll;
+    background: var(--logo-col-pink);
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+#servicesHead {
+    font-size: 2.5rem;
+    color: var(--primary-col);
+    font-family: var(--head-font);
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 4rem;
+    margin-left: 2rem;
+    display: none;
+
+    .servicesHeadWord {
+        margin: 0 0.5rem;
+    }
+
+    .servicesHeadChar {
+        opacity: 0;
+        display: inline-block;
+    }
+}
+
+
+#servicesScrollControllerCont {
+
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    overflow: scroll;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    #servicesScrollController {
+        width: 100%;
+    }
+}
+
+#servicesGrid {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    width: 80%;
+    height: 100%;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .serviceItem {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        perspective: 1000px;
+
+        .serviceText {
+            text-align: left;
+            font-size: 1.1rem;
+            font-weight: 700;
+            box-sizing: border-box;
+            // color: var(--text-col-2);
+            color: white;
+            padding: 1rem;
+            padding-right: 8rem;
+            // line-height: 3rem;
+            // background-color: white;
+            // border-radius: 20px;
+            // border: 5px solid white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 50%;
+            height: 100%;
+            transform-origin: left center;
+            animation: serTex 0.4s cubic-bezier(.62,.02,.15,1) forwards;
+        }
+        
+        .serImgCont {
+            height: 100%;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            justify-content: center;
+            text-align: center;
+            animation: serImg 0.4s cubic-bezier(0.62, 0.02, 0.15, 1) forwards;
+            transform-origin: right center;
+            // border-top-right-radius: 20px;
+            // border-bottom-right-radius: 20px;
+
+
+            .serviceImg {
+                height: 100%;
+                align-self: center;
+            }
+        }
+    }
+}
+
+.normalizeTex {
+    animation: normalizeTex 0.4s cubic-bezier(.62,.02,.15,1) forwards !important;
+}
+
+.normalizeImg {
+    animation: normalizeImg 0.4s cubic-bezier(.62,.02,.15,1) forwards !important;
+}
+
+@keyframes serImg {
+    to {
+        transform: rotateY(-90deg);
+    }
+}
+
+@keyframes serTex {
+    to {
+        transform: rotateY(89deg);
+    }
+}
+
+@keyframes normalizeImg {
+    from {
+        transform: rotateY(-90deg);
+    } to {
+        transform: rotateY(0deg);
+    }
+}
+
+@keyframes normalizeTex {
+    from {
+        transform: rotateY(89deg);
+    } to {
+        transform: rotateY(0deg);
+    }
+}
+
+.serviceNavCont {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-right: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    height: 100%;
+    width: 35%;
+    background: var(--logo-col-blue);
+    clip-path: polygon(100% 0, 60% 0, 0% 10%, 60% 100%, 100% 100%);
+    transition: clip-path 0.4s;
+
+
+    .serviceHead {
+        font-size: 2rem;
+        padding: 1rem 0;
+        color: var(--text-col-2);
+        width: 60%;
+        text-transform: capitalize;
+        transform-origin: right center;
+        text-align: right;
+        transform: scale(0.5);
+        margin: -1.3rem 0;
+        line-height: 2.5rem;
+        transition: 0.3s;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(0.65);
+            transition: 0.1s !important;
+        }
+    }
+
+
+    svg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        transform: translateX(-10%) scaleY(2.5);
+        z-index: -2;
+        display: none;
+    }
+}
+
+.selectedServiceHead {
+    transform: scale(1) !important;
+    transition: 0.4s;
+    color: var(--text-col-2) !important;
+    color: white !important;
+    font-weight: 900;
+}
+
+#serScrollArrow {
+    font-size: 2rem;
+    opacity: 0.75;
+    position: absolute;
+    bottom: 1rem;
+    color: white;
+    left: calc(40%);
+    animation: serScrollArrow 1.5s infinite;
+}
+
+@keyframes serScrollArrow {
+    0% {
+        bottom: 3rem;
+        opacity: 0;
+        transform: scale(0.6);
+    } 80% {
+        opacity: 0.75;
+    } 100% {
+        bottom: 1rem;
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+@media only screen and (max-width: $scnd-brk-pt) {
+
+    #servicesHead {
+        font-size: 2rem;
+        margin: 1rem;
+        margin-top: 0;
+    }
+
+    #servicesCont {
+        flex-direction: column;
+
+        #serviceHeadCont {
+            height: 50%;
+            width: 100%;
+        }
+
+        #serviceTextCont {
+            height: 50%;
+            width: 100%;
+
+            .serviceText {
+                font-size: 1.05rem;
+                font-weight: 400;
+            }
+        }
+    }
+}

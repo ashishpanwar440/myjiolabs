@@ -1,0 +1,63 @@
+@import '../Root/Variables.scss';
+
+.animatePageOut {
+    animation: animatePageOut $navigation-time forwards;
+}
+
+.animatePageIn {
+    animation: animatePageIn $navigation-time forwards;
+}
+
+.fadeOut {
+    animation: fadeOut $fadeOut-time forwards;
+}
+
+.enter {
+    animation: enter $enter-time forwards;
+}
+
+@keyframes animatePageOut {
+    0% {
+        transform: translateZ(0px);
+        opacity: 1;
+    } 15% {
+        transform: translateZ(-120px);
+    } 30% {
+        transform: translateX(0);
+        opacity: 0;
+    } 70% {
+        transform: translateX(-200vw);
+    } 100% {
+        transform: translateX(-200vw);
+    }
+}
+
+@keyframes animatePageIn {
+    0% {
+        transform: translateX(-200vw);
+        opacity: 0;
+    } 30% {
+        transform: translateX(-200vw);
+    } 70% {
+        opacity: 0;
+        transform: translate3d(0, 0, -180px);
+    } 100% {
+        opacity: 1;
+        transform: translateZ(0px);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        transform: scale(0.9);
+        opacity: 0.4;
+    }
+}
+
+@keyframes enter {
+    from {
+        transform: translateX(100vw);
+    } to {
+        transform: translateX(0vw);
+    }
+}

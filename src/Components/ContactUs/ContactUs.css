@@ -1,0 +1,365 @@
+#contact {
+  overflow: scroll;
+  padding: 0;
+  color: var(--logo-col-jio);
+}
+
+#contact::-webkit-scrollbar {
+  display: none;
+}
+
+#contactCont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 100%;
+}
+
+#contactCont .leftDotsCont {
+  left: 2.5rem;
+}
+
+#contactHead {
+  font-size: 3rem;
+  color: white;
+  font-family: var(--head-font);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 3.5rem;
+  padding-left: 2rem;
+  width: 100%;
+}
+
+#contactHead .contactHeadWord {
+  margin: 0 0.5rem;
+}
+
+#contactHead .contactHeadChar {
+  opacity: 0;
+  display: inline-block;
+}
+
+#contactHead svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#contactHead svg path {
+  fill: var(--logo-col-pink);
+}
+
+#partnerShipCont {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  padding: 1rem;
+  padding-top: 15rem;
+  padding-left: 3rem;
+}
+
+#partnerShipCont #partnerShipHead {
+  font-size: 1.6rem;
+  margin: 0 5px 1rem 5px;
+  font-weight: 600;
+  color: var(--text-col-3);
+  text-transform: uppercase;
+  opacity: 0;
+}
+
+#otherContactCont {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2rem;
+  padding-top: 12rem;
+  padding-right: 5rem;
+}
+
+#otherContactCont .otherContItem {
+  margin-bottom: 2rem;
+  opacity: 0;
+  background: var(--logo-col-blue);
+  padding: 1rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+}
+
+#otherContactCont .otherContItem .otherContHead {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--text-col-3);
+}
+
+#otherContactCont .otherContItem .otherContText {
+  font-size: 1rem;
+  margin: 10px 0;
+  font-weight: 800;
+  font-family: var(--nav-font);
+  color: white;
+}
+
+#otherContactCont .otherContItem .otherContText .contName, #otherContactCont .otherContItem .otherContText .contPhone, #otherContactCont .otherContItem .otherContText .contEmail {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--logo-col-jio);
+  color: var(--text-col-3);
+}
+
+#otherContactCont #mapCont {
+  background: var(--logo-col-pink);
+  min-height: calc(100px + 2rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#otherContactCont #mapCont a {
+  color: white;
+  padding-right: 100px;
+  text-decoration: none;
+}
+
+#otherContactCont #mapCont #mapHovCont {
+  -webkit-clip-path: circle(50px at calc(100% - 3.4rem) calc(100% - 3.4rem));
+          clip-path: circle(50px at calc(100% - 3.4rem) calc(100% - 3.4rem));
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50vw;
+  height: 80vh;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  background: var(--logo-col-blue);
+  border-radius: 10px;
+}
+
+#otherContactCont #mapCont #mapHovCont div {
+  color: white;
+  position: absolute;
+  bottom: 2.6rem;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  right: 1rem;
+}
+
+#otherContactCont #mapCont #mapHovCont #map {
+  opacity: 0;
+  width: 50vw;
+  height: 80vh;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  position: absolute;
+  border-radius: 10px;
+}
+
+#otherContactCont #mapCont #mapHovCont:hover {
+  background: var(--logo-col-pink);
+  -webkit-clip-path: circle(150% at 100% 100%);
+          clip-path: circle(150% at 100% 100%);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+#otherContactCont #mapCont #mapHovCont:hover #map {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  opacity: 1;
+}
+
+#otherContactCont #mapCont #mapHovCont:hover div {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  opacity: 0;
+}
+
+#contactFormCont .formDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 10px;
+  margin-left: 0;
+  opacity: 0;
+}
+
+#contactFormCont .contactInput, #contactFormCont textarea {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border: none;
+  border-bottom: 2px solid var(--logo-col-blue);
+  padding: 1.5rem;
+  font-size: 1rem;
+  font-family: var(--head-font);
+  font-weight: 900;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 5px;
+}
+
+#contactFormCont .contactInput:focus, #contactFormCont textarea:focus {
+  outline: none;
+  border-bottom: 2px solid var(--primary-col);
+}
+
+#contactFormCont .contactInput::-webkit-input-placeholder, #contactFormCont textarea::-webkit-input-placeholder {
+  color: #a0a0a0;
+}
+
+#contactFormCont .contactInput:-ms-input-placeholder, #contactFormCont textarea:-ms-input-placeholder {
+  color: #a0a0a0;
+}
+
+#contactFormCont .contactInput::-ms-input-placeholder, #contactFormCont textarea::-ms-input-placeholder {
+  color: #a0a0a0;
+}
+
+#contactFormCont .contactInput::placeholder, #contactFormCont textarea::placeholder {
+  color: #a0a0a0;
+}
+
+#contactFormCont #formSubmitCont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin: 10px;
+  opacity: 0;
+}
+
+#contactFormCont #formSubmitCont button {
+  margin: 10px 5px;
+  background: var(--logo-col-pink);
+  border: 2px solid var(--logo-col-pink);
+  padding: 10px 30px;
+  font-size: 1rem;
+  font-weight: 400;
+  color: white;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  border-radius: 5px;
+  opacity: 1;
+}
+
+#contactFormCont #formSubmitCont button:hover {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.slideFromBottom {
+  -webkit-animation: slideFromBottom 0.5s forwards cubic-bezier(0, 1.25, 1, 1);
+          animation: slideFromBottom 0.5s forwards cubic-bezier(0, 1.25, 1, 1);
+}
+
+@-webkit-keyframes slideFromBottom {
+  0% {
+    -webkit-transform: translateY(50vh);
+            transform: translateY(50vh);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0vh);
+            transform: translateY(0vh);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromBottom {
+  0% {
+    -webkit-transform: translateY(50vh);
+            transform: translateY(50vh);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0vh);
+            transform: translateY(0vh);
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 690px) {
+  #contactCont {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: 1rem;
+  }
+  #contactCont #partnerShipCont {
+    -webkit-box-flex: 1;
+        -ms-flex: auto;
+            flex: auto;
+  }
+  #contactCont #partnerShipCont #partnerShipHead {
+    margin-top: 0.75rem;
+    font-size: 1.75rem;
+  }
+  #contactCont #partnerShipCont #contactFormCont .formDiv {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0px 10px;
+  }
+  #contactCont #partnerShipCont #contactFormCont .formDiv .contactInput, #contactCont #partnerShipCont #contactFormCont .formDiv textarea {
+    margin: 5px 0;
+    padding: 1rem;
+  }
+  #contactCont #otherContactCont {
+    -webkit-box-flex: 1;
+        -ms-flex: auto;
+            flex: auto;
+  }
+}
+/*# sourceMappingURL=ContactUs.css.map */
